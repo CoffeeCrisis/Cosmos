@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="card-group">
+  <div class="card">
+    <img src={{pic[0]}} class="card-img-top" alt="Произошла какая-то ошибка">
+  </div>
+  <div class="card">
+    <img src={{pic[1]}} class="card-img-top" alt="Произошла какая-то ошибка">
+  </div>
+  <div class="card">
+    <img src={{pic[2]}} class="card-img-top" alt="Произошла какая-то ошибка">
+  </div>
+</div>
+<div class="card text-center">
+  <div class="card-header">
+    Сегодняшняя погода на Марсе
+  </div>
+  <div class="card-body">
+    <p class="card-text">Температура от {{t[0]}}°F до {{t[1]}}°F</p>
+	<p class="card-text">Скорость ветра от {{v[0]}}m/s до {{v[1]}}m/s</p>
+	<p class="card-text">Давление от {{p[0]}}Pa до {{p[1]}}Pa</p>
+  </div>
+  <div class="card-footer text-muted">
+    {{today}}
+  </div>
+</div>
+<footer>
+<nav class="navbar navbar-light bg-dark">
+	<p>
+		<a class="btn btn-outline-warning" href="/">Главная</a>
+		<a class="btn btn-outline-warning" href="/photo">Фото дня</a>
+		<a class="btn btn-outline-warning" href="/collection">Запуски</a>
+		<a class="btn btn-outline-warning" href="/iss">На орбите</a>
+		<a class="btn btn-outline-warning" href="/mars">Марс</a>
+		<a class="btn btn-outline-warning" href="/comet">Космические тела</a>
+		{% if current_user.is_authenticated %}
+			<a class="btn btn-outline-warning" href="/game">Тест</a>
+		{% endif %}
+	</p>
+</nav>
+</footer>
+{% endblock %}

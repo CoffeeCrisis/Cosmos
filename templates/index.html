@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<img src="/static/img/space1.jpg" class="rounded mx-auto d-block">
+	<h1> </h1>
+<footer>
+<nav class="navbar navbar-light bg-dark">
+	<p>
+		<a class="btn btn-outline-warning" href="/">Главная</a>
+		<a class="btn btn-outline-warning" href="/photo">Фото дня</a>
+		<a class="btn btn-outline-warning" href="/collection">Запуски</a>
+		<a class="btn btn-outline-warning" href="/iss">На орбите</a>
+		<a class="btn btn-outline-warning" href="/mars">Марс</a>
+		<a class="btn btn-outline-warning" href="/comet">Космические тела</a>
+		{% if current_user.is_authenticated %}
+			<a class="btn btn-outline-warning" href="/game">Тест</a>
+		{% endif %}
+	</p>
+</nav>
+</footer>
+{% endblock %}

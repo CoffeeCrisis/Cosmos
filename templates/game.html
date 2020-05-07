@@ -1,0 +1,153 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1> Тест по Солнечной системе:</h1>
+<form action="" method="post">
+    {{ form.hidden_tag() }}
+	{{ form.csrf_token }}
+	
+	<h3>{{ form.one.label }}</h3>
+		{% for subfield in form.one %}
+    <tr>
+        <td>{{ subfield }}</td>
+        <td>{{ subfield.label }}</td>
+    </tr>
+{% endfor %}
+        {% for error in form.one.errors %}
+    <p class="alert alert-danger" role="alert">
+        {{ error }}
+    </p>
+    {% endfor %}
+    </p>
+	<h3>{{ form.two.label }}</h3>
+		{% for subfield in form.two %}
+    <tr>
+        <td>{{ subfield }}</td>
+        <td>{{ subfield.label }}</td>
+    </tr>
+{% endfor %}
+        {% for error in form.two.errors %}
+    <p class="alert alert-danger" role="alert">
+        {{ error }}
+    </p>
+    {% endfor %}
+    </p>
+	<h3>{{ form.three.label }}</h3>
+		{% for subfield in form.three %}
+    <tr>
+        <td>{{ subfield }}</td>
+        <td>{{ subfield.label }}</td>
+    </tr>
+{% endfor %}
+        {% for error in form.three.errors %}
+    <p class="alert alert-danger" role="alert">
+        {{ error }}
+    </p>
+    {% endfor %}
+    </p>
+	<h3>{{ form.four.label }}</h3>
+		{% for subfield in form.four %}
+    <tr>
+        <td>{{ subfield }}</td>
+        <td>{{ subfield.label }}</td>
+    </tr>
+{% endfor %}
+        {% for error in form.four.errors %}
+    <p class="alert alert-danger" role="alert">
+        {{ error }}
+    </p>
+    {% endfor %}
+    </p>
+	<h3>{{ form.five.label }}</h3>
+		{% for subfield in form.five %}
+    <tr>
+        <td>{{ subfield }}</td>
+        <td>{{ subfield.label }}</td>
+    </tr>
+{% endfor %}
+        {% for error in form.five.errors %}
+    <p class="alert alert-danger" role="alert">
+        {{ error }}
+    </p>
+    {% endfor %}
+    </p>
+	<h3>{{ form.six.label }}</h3>
+		{% for subfield in form.six %}
+    <tr>
+        <td>{{ subfield }}</td>
+        <td>{{ subfield.label }}</td>
+    </tr>
+{% endfor %}
+        {% for error in form.six.errors %}
+    <p class="alert alert-danger" role="alert">
+        {{ error }}
+    </p>
+    {% endfor %}
+    </p>
+	<h3>{{ form.seven.label }}</h3>
+		{% for subfield in form.seven %}
+    <tr>
+        <td>{{ subfield }}</td>
+        <td>{{ subfield.label }}</td>
+    </tr>
+{% endfor %}
+        {% for error in form.seven.errors %}
+    <p class="alert alert-danger" role="alert">
+        {{ error }}
+    </p>
+    {% endfor %}
+    </p>
+	<h3>{{ form.eight.label }}</h3>
+		{% for subfield in form.eight %}
+    <tr>
+        <td>{{ subfield }}</td>
+        <td>{{ subfield.label }}</td>
+    </tr>
+{% endfor %}
+        {% for error in form.eight.errors %}
+    <p class="alert alert-danger" role="alert">
+        {{ error }}
+    </p>
+    {% endfor %}
+    </p>
+	<h3>{{ form.nine.label }}</h3>
+		{% for subfield in form.nine %}
+    <tr>
+        <td>{{ subfield }}</td>
+        <td>{{ subfield.label }}</td>
+    </tr>
+{% endfor %}
+        {% for error in form.nine.errors %}
+    <p class="alert alert-danger" role="alert">
+        {{ error }}
+    </p>
+    {% endfor %}
+    </p>
+	<h3>{{ form.ten.label }}</h3>
+		{% for subfield in form.ten %}
+    <tr>
+        <td>{{ subfield }}</td>
+        <td>{{ subfield.label }}</td>
+    </tr>
+{% endfor %}
+        {% for error in form.ten.errors %}
+    <p class="alert alert-danger" role="alert">
+        {{ error }}
+    </p>
+    {% endfor %}
+    </p>
+  <p>{{ form.submit(type="submit", class="btn btn-dark") }}</p>
+<footer>
+<nav class="navbar navbar-light bg-dark">
+	<p>
+		<a class="btn btn-outline-warning" href="/">Главная</a>
+		<a class="btn btn-outline-warning" href="/photo">Фото дня</a>
+		<a class="btn btn-outline-warning" href="/collection">Запуски</a>
+		<a class="btn btn-outline-warning" href="/iss">На орбите</a>
+		<a class="btn btn-outline-warning" href="/mars">Марс</a>
+		<a class="btn btn-outline-warning" href="/comet">Космические тела</a>
+		<a class="btn btn-outline-warning" href="/game">Тест</a>
+	</p>
+</nav>
+</footer>
+{% endblock %}

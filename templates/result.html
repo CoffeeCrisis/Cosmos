@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="card">
+  <div class="card-body">
+    Ваш результат: {{score}}/10
+  </div>
+</div>
+<h3>Ответы:</h3>
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Вопрос</th>
+      <th scope="col">Правильный ответ</th>
+      <th scope="col">Результат</th>
+    </tr>
+  </thead>
+  <tbody>
+ {% for i in range(10) %}
+    <tr>
+      <th scope="row">{{i + 1}}</th>
+      <td>{{ques[i]}}</td>
+      <td>{{reply[i]}}</td>
+	  {% if answer[i] %}
+      <td><span class="badge badge-pill badge-success">+</span></td>
+	  {% else %}
+	  <td><span class="badge badge-pill badge-danger">-</span></td>
+	  {% endif %}
+    </tr>
+ {% endfor %}
+  </tbody>
+</table>
+<footer>
+<nav class="navbar navbar-light bg-dark">
+	<p>
+		<a class="btn btn-outline-warning" href="/">Главная</a>
+		<a class="btn btn-outline-warning" href="/photo">Фото дня</a>
+		<a class="btn btn-outline-warning" href="/collection">Запуски</a>
+		<a class="btn btn-outline-warning" href="/iss">На орбите</a>
+		<a class="btn btn-outline-warning" href="/mars">Марс</a>
+		<a class="btn btn-outline-warning" href="/comet">Космические тела</a>
+		<a class="btn btn-outline-warning" href="/game">Тест</a>
+	</p>
+</nav>
+</footer>
+{% endblock %}
